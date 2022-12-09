@@ -37,5 +37,6 @@ int	main(void)
 	ft_lstadd_front(&list, new_element);
 	ft_print_all(list);
 	printf("Size list : %d\n", ft_lstsize(list));
+	printf("LAST : %s\n", (char *)(ft_lstlast(list)->content));
 	return (0);
 }
