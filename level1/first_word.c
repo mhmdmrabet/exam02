@@ -12,9 +12,11 @@
 
 #include "level1.h"
 
-void first_word(char *str)
+void	first_word(char *str)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (str[i] == ' ' || str[i] == '\t')
 		i++;
 	while (str[i] != ' ' && str[i] != '\t' && str[i] != '\0')

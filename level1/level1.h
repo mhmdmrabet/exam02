@@ -18,5 +18,6 @@
 # include <unistd.h>
 
 void	first_word(char *str);
+void	ft_putstr(char *str);
 
 #endif
