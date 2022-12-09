@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   level1.h                                           :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmrabet <mmrabet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 08:06:33 by mmrabet           #+#    #+#             */
-/*   Updated: 2022/12/09 08:06:33 by mmrabet          ###   ########.fr       */
+/*   Created: 2022/12/09 13:54:43 by mmrabet           #+#    #+#             */
+/*   Updated: 2022/12/09 13:54:43 by mmrabet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "level1.h"
 
+char	*ft_strcpy(char *dest, const char *src)
+{
+	int	i;
 
-#ifndef LEVEL1_H
-# define LEVEL1_H
-
-# include <unistd.h>
-
-char	*ft_strcpy(char *dest,const char *src);
-void	first_word(char *str);
-void	ft_putstr(char *str);
-
-#endif
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
