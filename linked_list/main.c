@@ -12,6 +12,11 @@
 
 #include "linked_list.h"
 
+void	del(void *item)
+{
+	(void)item;
+}
+
 void	ft_print_all(t_list *list)
 {
 	t_list	*head;
@@ -26,7 +31,6 @@ void	ft_print_all(t_list *list)
 	}
 }
 
-
 int	main(void)
 {
 	t_list	*list;
@@ -36,8 +40,11 @@ int	main(void)
 	new_element = ft_lstnew("mohamed");
 	ft_lstadd_front(&list, new_element);
 	ft_lstadd_back(&list, ft_lstnew("Oussama"));
+	printf("Size list : %d\n", ft_lstsize(list));
+	ft_print_all(list);
+	ft_lstclear(&list, del);
 	ft_print_all(list);
 	printf("Size list : %d\n", ft_lstsize(list));
-	printf("LAST : %s\n", (char *)(ft_lstlast(list)->content));
+	// printf("LAST : %s\n", (char *)(ft_lstlast(list)->content));
 	return (0);
 }
