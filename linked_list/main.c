@@ -15,11 +15,13 @@
 void	ft_print_all(t_list *list)
 {
 	t_list	*head;
+	int		i;
 
 	head = list;
+	i = 1;
 	while (head)
 	{
-		puts(head->content);
+		printf("[%d] : %s\n", i++, (char *)head->content);
 		head = head->next;
 	}
 }
@@ -28,9 +30,12 @@ void	ft_print_all(t_list *list)
 int	main(void)
 {
 	t_list	*list;
+	t_list	*new_element;
 
 	list = ft_lstnew("abdel");
+	new_element = ft_lstnew("mohamed");
+	ft_lstadd_front(&list, new_element);
 	ft_print_all(list);
-	free(list);
+	printf("Size list : %d\n", ft_lstsize(list));
 	return (0);
 }
