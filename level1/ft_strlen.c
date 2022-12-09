@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   level1.h                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmrabet <mmrabet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 08:06:33 by mmrabet           #+#    #+#             */
-/*   Updated: 2022/12/09 08:06:33 by mmrabet          ###   ########.fr       */
+/*   Created: 2022/12/09 18:56:21 by mmrabet           #+#    #+#             */
+/*   Updated: 2022/12/09 18:56:21 by mmrabet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "level1.h"
 
+int	ft_strlen(char *str)
+{
+	int	i;
 
-#ifndef LEVEL1_H
-# define LEVEL1_H
-
-# include <unistd.h>
-
-char	*ft_strcpy(char *dest, const char *src);
-void	first_word(char *str);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
