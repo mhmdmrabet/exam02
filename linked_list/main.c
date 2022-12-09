@@ -35,6 +35,7 @@ int	main(void)
 	list = ft_lstnew("abdel");
 	new_element = ft_lstnew("mohamed");
 	ft_lstadd_front(&list, new_element);
+	ft_lstadd_back(&list, ft_lstnew("Oussama"));
 	ft_print_all(list);
 	printf("Size list : %d\n", ft_lstsize(list));
 	printf("LAST : %s\n", (char *)(ft_lstlast(list)->content));
