@@ -17,14 +17,6 @@ void	del(void *item)
 	(void)item;
 }
 
-void	ft_double(void *item)
-{
-	char	*tmp;
-
-	tmp = (char *)item;
-	*tmp ="s";
-}
-
 void	ft_print_all(t_list *list)
 {
 	t_list	*head;
@@ -42,15 +34,9 @@ void	ft_print_all(t_list *list)
 int	main(void)
 {
 	t_list	*list;
-	t_list	*new_element;
 
-	list = ft_lstnew("ab");
-	new_element = ft_lstnew("bc");
-	ft_lstadd_front(&list, new_element);
-	ft_lstadd_back(&list, ft_lstnew("cd"));
+	list = ft_lstnew("mohamed");
 	printf("Size list : %d\n", ft_lstsize(list));
-	ft_lstiter(list, ft_double);
 	ft_print_all(list);
-	// printf("LAST : %s\n", (char *)(ft_lstlast(list)->content));
 	return (0);
 }
